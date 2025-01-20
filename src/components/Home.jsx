@@ -32,7 +32,7 @@ const Home = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl lg:text-3xl font-smooch text-white mb-7 text-center"
         >
-          Software Developer
+          Software Engineer
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: -20 }}

@@ -12,15 +12,20 @@ function App() {
     //     <Home />
     //   </motion.div>
     // </div>
-    <>
-      <div className="fixed inset-0 w-full h-full bg-black z-0 pointer-events-none">
-        <Matrix className="absolute inset-0" />
-      </div>
+    // <>
+    //   <div className="fixed inset-0 w-full h-full bg-black z-0 pointer-events-none">
+    //     <Matrix className="absolute inset-0" />
+    //   </div>
 
-      <motion.div className="relative z-10">
-        <Home />
-      </motion.div>
-    </>
+    //   <motion.div className="relative z-10">
+    //     <Home />
+    //   </motion.div>
+    // </>
+    <div>
+      <Routes>
+        <Route path={`/miguelmonteiro.dev`} element={<Home />} />
+      </Routes>
+    </div>
   );
 }
 

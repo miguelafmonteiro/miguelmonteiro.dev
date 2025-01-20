@@ -1,10 +1,8 @@
 import React from 'react';
 import Matrix from './components/Matrix.jsx';
-import Navbar from './components/Navbar';
 import Home from './components/Home.jsx';
 
 import { motion } from 'framer-motion';
-import Features from './components/Section1.jsx';
 
 function App() {
   return (

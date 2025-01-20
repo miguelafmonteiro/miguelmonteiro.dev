@@ -48,5 +48,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
       
-      - name: Add custom domain (CNAME)
-        run: echo "miguelmonteiro.dev" > ./dist/CNAME

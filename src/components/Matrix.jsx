@@ -1,8 +1,15 @@
-import React, { useEffect, useRef } from "react";
-
+import { useEffect, useRef } from "react";
+import { colors } from "../assets/colors";
+import { context } from './ContextProvider';
 
 const Matrix = () => {
+  const { matrixFontColor } = context();
   const canvasRef = useRef(null);
+  const colorRef = useRef(matrixFontColor);
+
+  useEffect(() => {
+    colorRef.current = matrixFontColor;
+  }, [matrixFontColor]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -26,10 +33,10 @@ const Matrix = () => {
 
     const draw = () => {
       // Create a translucent black rectangle to create the fading effect
-      ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+      ctx.fillStyle = colors.catppuccin.frappe.baseOpacity.rgb;
       ctx.fillRect(0, 0, width, height);
 
-      ctx.fillStyle = "#0f0"; // Green color for characters
+      ctx.fillStyle = colorRef.current;
 
       // Draw the characters
       ctx.font = "20px matrix";

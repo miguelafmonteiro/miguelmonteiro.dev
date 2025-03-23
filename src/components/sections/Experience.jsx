@@ -4,9 +4,9 @@ import 'react-vertical-timeline-component/style.min.css';
 import humanLogo from '../../assets/img/human_logo_hand.png';
 import inescLogo from '../../assets/img/inesc_id_logo.png';
 import VerticalTimelineElementCustom from '../timeline/VerticalTimelineElementCustom';
+import Icon from '../common/Icon';
 import { colors } from '../../assets/colors';
 import Section from './Section';
-import Tooltip from '@mui/material/Tooltip';
 
 const Experience = () => {
   return (
@@ -43,14 +43,12 @@ const Experience = () => {
             content={<span>Developing <b>Advisor</b>: a web-based business intelligence platform that provides real-time analytics, narrative insights, forecasting tools, and actionable recommendations.</span>}
             icons={
               <>
-                {/* <Tooltip title="Python" placement='bottom'> */}
-                <motion.i className="devicon-python-plain text-2xl"></motion.i>
-                {/* </Tooltip> */}
-                <motion.i className="devicon-react-plain text-2xl"></motion.i>
-                <motion.i className="devicon-javascript-plain text-2xl"></motion.i>
-                <motion.i className="devicon-cypressio-plain text-2xl"></motion.i>
-                <motion.i className="devicon-docker-plain text-2xl"></motion.i>
-                <motion.i className="devicon-elasticsearch-plain text-2xl"></motion.i>
+                <Icon icon="devicon-python-plain"className="text-2xl"tooltip="Python"/>
+                <Icon icon="devicon-react-plain "className="text-2xl"tooltip="React"/>
+                <Icon icon="devicon-javascript-plain"className="text-2xl"tooltip="JavaScript"/>
+                <Icon icon="devicon-cypressio-plain"className="text-2xl"tooltip="Cypress"/>
+                <Icon icon="devicon-docker-plain"className="text-2xl"tooltip="Docker"/>
+                <Icon icon="devicon-elasticsearch-plain"className="text-2xl"tooltip="Elasticsearch"/>
               </>
             } 
             imageScale={0.7}
@@ -72,11 +70,11 @@ const Experience = () => {
             }
             icons={
               <>
-                <motion.i className="devicon-nodejs-plain text-2xl"></motion.i>
-                <motion.i className="devicon-javascript-plain text-2xl"></motion.i>
-                <motion.i className="devicon-python-plain text-2xl"></motion.i>
-                <motion.i className="devicon-neo4j-plain text-4xl -mb-2"></motion.i>
-                <motion.i className="devicon-typescript-plain text-2xl"></motion.i>
+                <Icon icon="devicon-nodejs-plain "className="text-2xl"tooltip="Node.js"/>
+                <Icon icon="devicon-javascript-plain"className="text-2xl"tooltip="JavaScript"/>
+                <Icon icon="devicon-python-plain"className="text-2xl"tooltip="Python"/>
+                <Icon icon="devicon-neo4j-plain"className="text-4xl"tooltip="Neo4j"/>
+                <Icon icon="devicon-typescript-plain"className="text-2xl"tooltip="TypeScript"/>
               </>
             } 
             imageScale={0.65}
@@ -98,11 +96,9 @@ const Experience = () => {
             }
             icons={
               <>
-                <motion.i className="devicon-nodejs-plain text-2xl"></motion.i>
-                <motion.i className="devicon-javascript-plain text-2xl"></motion.i>
-                <motion.i className="devicon-python-plain text-2xl"></motion.i>
-                <motion.i className="devicon-neo4j-plain text-4xl -mb-2"></motion.i>
-                <motion.i className="devicon-typescript-plain text-2xl"></motion.i>
+                <Icon icon="devicon-nodejs-plain "className="text-2xl"tooltip="Node.js"/>
+                <Icon icon="devicon-javascript-plain"className="text-2xl"tooltip="JavaScript"/>
+                <Icon icon="devicon-python-plain"className="text-2xl"tooltip="Python"/>
               </>
             } 
             imageScale={0.65}

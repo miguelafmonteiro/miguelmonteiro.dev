@@ -14,7 +14,7 @@ const Home = () => {
     >
       <div 
         id="home" 
-        className="flex flex-col pb-10 md:pb-30 items-center justify-center h-screen"
+        className="flex flex-col pb-10 md:pb-30 items-center justify-center min-h-screen"
       >
         <motion.div 
           className="w-64 h-64 rounded-full overflow-hidden"

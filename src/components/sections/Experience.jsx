@@ -16,7 +16,7 @@ const Experience = () => {
     >
       <div 
         id='experience'
-        className="flex flex-col items-center justify-center w-full"
+        className="flex flex-col items-center justify-center min-h-screen"
       >
         <motion.h1
           initial={{ opacity: 0, y: -20 }}

@@ -14,82 +14,84 @@ const Background = () => {
   }, []);
 
   return (
-    <Particles
-      id="tsparticles"
-      options={{
-        background: {
-          color: {
-            value: colors.background,
+    <div className="absolute -z-10">
+      <Particles
+        id="tsparticles"
+        options={{
+          background: {
+            color: {
+              value: colors.background,
+            },
           },
-        },
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
-            onHover: {
-              enable: true,
-              mode: "grab",
-            },
-            resize: true,
-          },
-          modes: {
-            push: {
-              quantity: 4,
-            },
-            grab: {
-              distance: 300,
-              links: {
-								opacity: 1,
-								color: colors.primary,
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "repulse",
               },
-              duration: 1,
+              onHover: {
+                enable: true,
+                mode: "grab",
+              },
+              resize: true,
             },
-                      },
-          },
-        particles: {
-          color: {
-            value: colors.secondary,
-          },
-          links: {
-            color: colors.secondary,
-            distance: 150,
-            enable: true,
-            opacity: 0.4,
-            width: 1,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outModes: {
-              default: "bounce",
+            modes: {
+              repulse: {
+                distance: 400,
+              },
+              grab: {
+                distance: 300,
+                links: {
+                  opacity: 1,
+                  color: colors.primary,
+                },
+                duration: 1,
+              },
             },
-            random: false,
-            speed: 0.5,
-            straight: false,
           },
-          number: {
-            density: {
+          particles: {
+            color: {
+              value: colors.secondary,
+            },
+            links: {
+              color: colors.secondary,
+              distance: 150,
               enable: true,
-              area: 800,
+              opacity: 0.4,
+              width: 1,
             },
-            value: 150,
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 0.5,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 150,
+            },
+            opacity: {
+              value: 1,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
           },
-          opacity: {
-            value: 1,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            value: { min: 1, max: 5 },
-          },
-        },
-        detectRetina: true,
-      }}
-    />
+          detectRetina: true,
+        }}
+      />
+    </div>
   );
 };
 

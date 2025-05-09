@@ -1,5 +1,5 @@
 /* Import external fonts first */
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Smooch+Sans&display=swap');
 @import 'devicon/devicon.min.css';
 
 /* Tailwind imports - these should stay after your custom imports */
@@ -17,15 +17,14 @@
 @layer base {
   /* Apply default font globally */
   body {
-    font-family: 'Smooch', sans-serif;
+    @apply font-sans;
   }
 }
 
 :root {
-  /* Latte Theme */
-	--background: "#0F0F0F";
-	--surface: "#1C1C1E";
-	--textPrimary: "#E5E5E5";
-	--textSecondary: "#A1A1AA";
-	--accent: "#7CBF9E";
+	--background: #0F0F0F;
+	--surface: #1C1C1E;
+	--primary: #E5E5E5;
+	--secondary: #A1A1AA;
+	--accent: #7CBF9E;
 }

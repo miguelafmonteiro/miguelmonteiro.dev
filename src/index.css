@@ -21,10 +21,51 @@
   }
 }
 
+.underline-animate::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.underline-animate:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+@media (min-width: 1024px) {
+  .vertical-timeline.vertical-timeline--two-columns {
+    width: 100% !important;
+  }
+
+  .vertical-timeline-element {
+    margin: 50px 0;
+  }
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+    float: left;
+    padding: .8em 0;
+    opacity: 1;
+    color: var(--primary)
+}
+
 :root {
 	--background: #0F0F0F;
 	--surface: #1C1C1E;
 	--primary: #E5E5E5;
 	--secondary: #A1A1AA;
+	--accent: #7CBF9E;
+}
+
+[data-theme="light"] {
+	--background: #E5E5E5;
+	--surface: #A1A1AA;
+	--primary: #0F0F0F;
+	--secondary: #1C1C1E;
 	--accent: #7CBF9E;
 }

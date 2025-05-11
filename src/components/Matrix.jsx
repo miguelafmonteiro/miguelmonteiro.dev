@@ -1,22 +1,16 @@
 import { useEffect, useRef } from "react";
-import { colors } from "../assets/colors";
 import { context } from './ContextProvider';
 
 const Matrix = () => {
-  const { matrixFontColor } = context();
+  const { colors } = context();
   const canvasRef = useRef(null);
-  const colorRef = useRef(matrixFontColor);
-
-  useEffect(() => {
-    colorRef.current = matrixFontColor;
-  }, [matrixFontColor]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
-    ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+    ctx.fillStyle = colors.primary;
     ctx.fillRect(0, 0, width, height);
     let columns = Math.floor(width / 20); // Number of columns based on character width
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -28,17 +22,17 @@ const Matrix = () => {
       drops[i] = 1;
     }
 
-    let frameRate = 25; // Adjust the frame rate (lower value = slower speed)
+    let frameRate = 30; // Adjust the frame rate (lower value = slower speed)
     let lastFrameTime = Date.now();
 
     const draw = () => {
       // Create a translucent black rectangle to create the fading effect
-      ctx.fillStyle = colors.catppuccin.frappe.baseOpacity.rgb;
+      ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
       ctx.fillRect(0, 0, width, height);
 
-      ctx.fillStyle = colorRef.current;
+      ctx.fillStyle = colors.primary;
 
-      // Draw the characters
+      // Draw the characters  
       ctx.font = "20px matrix";
       for (let i = 0; i < drops.length; i++) {
         const text = charArray[Math.floor(Math.random() * charArray.length)];
@@ -66,7 +60,8 @@ const Matrix = () => {
       requestAnimationFrame(animate);
     };
 
-    animate();
+    // animate();
+    draw();     
 
     // Update canvas dimensions on window resize
     const handleResize = () => {
@@ -92,7 +87,7 @@ const Matrix = () => {
     };
   }, []);
 
-  return <canvas className="matrix-canvas fixed top-0 left-0 z-[-1]" ref={canvasRef}></canvas>;
+  return <canvas className="matrix-canvas fixed top-0 left-0" ref={canvasRef}></canvas>;
 };
 
 export default Matrix;

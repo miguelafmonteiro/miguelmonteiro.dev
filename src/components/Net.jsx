@@ -1,12 +1,9 @@
 import { useEffect } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { context } from './ContextProvider';
+import { colors } from "../assets/colors";
 
-
-const Background = () => {
-  const { colors } = context();
-
+const Net = () => {
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -14,7 +11,7 @@ const Background = () => {
   }, []);
 
   return (
-    <div className="absolute -z-10">
+    <div className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none">
       <Particles
         id="tsparticles"
         options={{
@@ -26,34 +23,21 @@ const Background = () => {
           fpsLimit: 120,
           interactivity: {
             events: {
-              onClick: {
-                enable: true,
-                mode: "repulse",
-              },
-              onHover: {
-                enable: true,
-                mode: "grab",
-              },
+              onClick: { enable: true, mode: "repulse" },
+              onHover: { enable: true, mode: "grab" },
               resize: true,
             },
             modes: {
-              repulse: {
-                distance: 400,
-              },
+              repulse: { distance: 400 },
               grab: {
                 distance: 300,
-                links: {
-                  opacity: 1,
-                  color: colors.primary,
-                },
+                links: { opacity: 1, color: colors.primary },
                 duration: 1,
               },
             },
           },
           particles: {
-            color: {
-              value: colors.secondary,
-            },
+            color: { value: colors.secondary },
             links: {
               color: colors.secondary,
               distance: 150,
@@ -64,29 +48,16 @@ const Background = () => {
             move: {
               direction: "none",
               enable: true,
-              outModes: {
-                default: "bounce",
-              },
-              random: false,
+              outModes: { default: "bounce" },
               speed: 0.5,
-              straight: false,
             },
             number: {
-              density: {
-                enable: true,
-                area: 800,
-              },
+              density: { enable: true, area: 800 },
               value: 150,
             },
-            opacity: {
-              value: 1,
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              value: { min: 1, max: 5 },
-            },
+            opacity: { value: 1 },
+            shape: { type: "circle" },
+            size: { value: { min: 1, max: 5 } },
           },
           detectRetina: true,
         }}
@@ -95,4 +66,4 @@ const Background = () => {
   );
 };
 
-export default Background;
+export default Net;

@@ -3,15 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import me from '../../assets/img/me.jpg';
-import { context } from '../ContextProvider';
 
 const Home = () => {
-  const { colors } = context();
-
   return (
-    <div 
+    <motion.div 
       id="home" 
-      className="flex flex-col pb-10 md:pb-30 items-center justify-center min-h-screen"
+      className="flex flex-col items-center justify-center min-h-screen"
+      initial={{
+        opacity: 0
+      }}
+      animate={{
+        opacity: 1
+      }}
+      transition={{duration: 0.5, delay: 3.5}}
     >
       <motion.div 
         className="w-64 h-64 rounded-full overflow-hidden"
@@ -32,7 +36,7 @@ const Home = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-5xl font-bold text-primary mb-7 mt-10"
+        className="text-5xl font-bold text-primary text-center mb-7 mt-10"
       >
         Miguel Monteiro
       </motion.h1>
@@ -42,7 +46,15 @@ const Home = () => {
         transition={{ duration: 0.8 }}
         className="text-3xl mb-7 text-secondary text-center"
       >
-        Software Engineer
+        {"Software Engineer @ "}
+        <a 
+					href="https://humanready.io"
+					target="_blank"
+					rel="noopener noreferrer"
+          className="relative cursor-pointer underline-animate"
+        >
+          Human Ready 
+        </a>
       </motion.p>
       <motion.ul 
         initial={{ opacity: 0, y: -20 }}
@@ -52,13 +64,13 @@ const Home = () => {
       >
         <motion.a
           initial={{
-            color: colors.secondary,
+            color: "var(--secondary)",
             filter: `drop-shadow(0px 0px 0px)`,
             opacity: 1,
           }}
           whileHover={{
-            color: colors.primary,
-            filter: `drop-shadow(0px 0px 5px ${colors.primary})`,
+            color: "var(--primary)",
+            filter: `drop-shadow(0px 0px 5px var(--primary))`,
           }}
           href="https://www.linkedin.com/in/miguelafmonteiro/"
           target="_blank"
@@ -68,13 +80,15 @@ const Home = () => {
         </motion.a>
         <motion.a
           initial={{
-            color: colors.secondary,
+            color: "var(--secondary)",
             filter: `drop-shadow(0px 0px 0px)`,
             opacity: 1,
+            scale: 1,
           }}
           whileHover={{
-            color: colors.primary,
-            filter: `drop-shadow(0px 0px 5px ${colors.primary})`,
+            color: "var(--primary)",
+            filter: `drop-shadow(0px 0px 5px var(--primary))`,
+            scale: 1.2,
           }}
           href="https://github.com/miguelafmonteiro"
           target="_blank"
@@ -84,13 +98,13 @@ const Home = () => {
         </motion.a>
         <motion.a
           initial={{
-            color: colors.secondary,
+            color: "var(--secondary)",
             filter: `drop-shadow(0px 0px 0px)`,
             opacity: 1,
           }}
           whileHover={{
-            color: colors.primary,
-            filter: `drop-shadow(0px 0px 5px ${colors.primary})`,
+            color: "var(--primary)",
+            filter: `drop-shadow(0px 0px 5px var(--primary))`,
           }}
           href="mailto:miguel.af.monteiro5@gmail.com"
           target="_blank"
@@ -99,7 +113,7 @@ const Home = () => {
           <FontAwesomeIcon icon={faEnvelope} size="2xl" />
         </motion.a>
       </motion.ul>
-    </div>
+    </motion.div>
   );
 };
 

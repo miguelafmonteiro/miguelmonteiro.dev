@@ -2,9 +2,6 @@ import { VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import { motion } from 'framer-motion';
 
 const VerticalTimelineElementCustom = ({
-	background,
-	textColor,
-	arrowColor,
 	date,
 	icon,
 	title,
@@ -12,61 +9,74 @@ const VerticalTimelineElementCustom = ({
 	content,
 	icons,
 	imageScale,
+	url,
 }) => {
-	const dateComponent = (
-		<span
-			style={{ 
-				fontSize: "25px",
-				color: "white"
-			}}
-		>
-			{date}	
-		</span>
-	);
-
   return (
 		<VerticalTimelineElement
 			contentStyle={{ 
-				background: background,
-				color: textColor,
-				opacity: 1
+				background: "var(--surface)",
+				color: "var(--primary)",
+				opacity: 0.9,
+				marginLeft: icon ? undefined : "0px" ,
+				marginBottom: "0px",
+				boxShadow: "0 3px 0 var(--primary)"
 			}}
 			contentArrowStyle={{
-				borderRight: '10px solid',
-				color: arrowColor
+				borderRight: `${icon ? "10px" : "0px"} solid`,
+				color: "var(--surface)"
 			}}
-			date={dateComponent}
+			date={date}
 			iconStyle={{
-				display: "flex",
+				display: icon ? "flex" : "none",
 				justifyContent: "center",
 				alignItems: "center",
 				overflow: "hidden",
 				background: "transparent",
-				boxShadow: `0 0 0 2px ${arrowColor}`,
+				boxShadow: `0 0 0 2px var(--primary)`,
 			}}
 			intersectionObserverProps={{
 				triggerOnce: false,
 			}}
 			icon={
-				<img 
-					src={icon} 
-					className="w-16 h-16 object-cover" 
+				<motion.a
+					href={url}
+					target="_blank"
+					rel="noopener noreferrer"
+					initial={{
+						// filter: `drop-shadow(0px 0px 0px)`,
+						scale: 1
+					}}
+					whileHover={{
+						// filter: `drop-shadow(0px 0px 5px #147db4)`,
+						opacity: 1,
+						scale: 1.2,
+					}}
+					transition={{ duraton: 1 }}
 					style={{
-						transform: `scale(${imageScale})`
+						cursor: "pointer"
+					}}
+				>
+				<img
+					src={icon}
+					className="object-cover"
+					style={{
+						transform: `scale(${imageScale})`,
+						backfaceVisibility: "hidden",
 					}}
 				/>
+				</motion.a>
 			}
 		>
-			<h1 className="vertical-timeline-element-title font-bold">{title}</h1>
-			<h3 className='text-base'>{subtitle}</h3>
+			<h1 className="text-xl font-bold">{title}</h1>
+			<h3 className='text-xs'>{subtitle}</h3>
 			<p></p>
-			<div className='text-xl text-justify'>{content}</div>
+			<div className='text-base text-justify'>{content}</div>
 			<p></p>
 			<motion.ul 
 				initial={{ opacity: 0, y: -20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8 }}
-				className="flex space-x-4 text-catppuccin-frappe-base"
+				className="flex space-x-4 text-secondary"
 			>
 				{icons}
 			</motion.ul>

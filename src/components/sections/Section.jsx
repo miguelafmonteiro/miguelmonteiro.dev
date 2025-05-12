@@ -25,7 +25,7 @@ const Section = ({nameStyle, matrixFontColor, children}) => {
   });
 
   return (
-    <div ref={sectionRef}>
+  <div ref={sectionRef} className="mt-20">
         {children}
     </div> 
   );

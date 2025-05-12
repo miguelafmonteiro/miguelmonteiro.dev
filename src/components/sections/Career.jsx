@@ -38,7 +38,8 @@ const Career = () => {
           <VerticalTimelineElementCustom
             date="Feb 2024 - Present"
             icon={humanLogo}
-            title="Software Engineer @ Human Ready"
+            title="Software Engineer @ "
+            titleUrl="Human Ready"
             subtitle="Lisbon, Portugal"
             content={<span>Developing <b>Advisor</b>: a web-based business intelligence platform that provides real-time analytics, narrative insights, forecasting tools, and actionable recommendations.</span>}
             icons={
@@ -54,11 +55,13 @@ const Career = () => {
             }
             imageScale={0.7}
             url="https://humanready.io"
+            logoColor={"var(--human-ready)"}
           />
           <VerticalTimelineElementCustom
             date="Aug 2022 - Jan 2024"
             icon={inescLogo}
-            title="Research Assitant @ INESC-ID"
+            title="Research Assitant @ "
+            titleUrl="INESC-ID"
             subtitle="Lisbon, Portugal"
             content={
               <span>
@@ -78,11 +81,13 @@ const Career = () => {
             }
             imageScale={0.65}
             url="https://www.inesc-id.pt/"
+            logoColor={"var(--inesc-id)"}
           />
           <VerticalTimelineElementCustom
             date="Nov 2021 - Jul 2022"
             icon={inescLogo}
-            title="Research Intern @ INESC-ID"
+            title="Research Intern @ "
+            titleUrl="INESC-ID"
             subtitle="Lisbon, Portugal"
             content={
               <span>
@@ -100,6 +105,7 @@ const Career = () => {
             }
             imageScale={0.65}
             url="https://www.inesc-id.pt/"
+            logoColor={"var(--inesc-id)"}
           />
         </VerticalTimeline>
       </div>

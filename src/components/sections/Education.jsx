@@ -37,7 +37,8 @@ const Education = () => {
             <VerticalTimelineElementCustom
               date="Sep 2021 - Dec 2023"
               icon={istLogo}
-              title="Master's in Computer Science and Engineering @ IST"
+              title="Master's in Computer Science and Engineering @ "
+              titleUrl="IST"
               subtitle="Lisbon, Portugal"
               content={
                 <span>
@@ -52,11 +53,13 @@ const Education = () => {
               }
               imageScale={0.5}
               url="https://tecnico.ulisboa.pt"
+              logoColor={"var(--ist)"}
             />
             <VerticalTimelineElementCustom
               date="Sep 2018 - Jul 2021"
               icon={istLogo}
-              title="Bachelors's in Computer Science and Engineering @ IST"
+              title="Bachelors's in Computer Science and Engineering @ "
+              titleUrl="IST"
               subtitle="Lisbon, Portugal"
               content={
                 <span>
@@ -67,6 +70,7 @@ const Education = () => {
               }
               imageScale={0.5}
               url="https://tecnico.ulisboa.pt"
+              logoColor={"var(--ist)"}
             />
           </VerticalTimeline>
         </div>
@@ -81,7 +85,14 @@ const Education = () => {
               title="Awards"
               content={
                 <span>
-                  <b>Jerónimo Martins Best Master's Thesis Award</b>
+                  <a
+                    href="https://tecnico.ulisboa.pt/pt/noticias/campus-e-comunidade/premio-de-merito-jeronimo-martins-atribuido-a-estudantes-do-tecnico/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative cursor-pointer underline-animate"
+                  >
+                    <b>Jerónimo Martins Best Master's Thesis Award</b>
+                  </a>
                   <p></p>
                   I won the 1st prize for the best Master's thesis in Computer Science and Engineering issued by Jerónimo Martins, receiving 1800€ for my work "ExplodeQ.js: A Library of Queries to Detect Injection Vulnerabilities in Node.js Applications."
                 </span>

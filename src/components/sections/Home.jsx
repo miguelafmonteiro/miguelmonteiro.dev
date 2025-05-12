@@ -53,7 +53,7 @@ const Home = () => {
 					rel="noopener noreferrer"
           className="relative cursor-pointer underline-animate"
         >
-          Human Ready 
+          Human Ready
         </a>
       </motion.p>
       <motion.ul 

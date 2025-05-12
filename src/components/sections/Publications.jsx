@@ -32,7 +32,9 @@ const Publications = () => {
       >
         <VerticalTimelineElementCustom
           date="June 2024"
-          title="Efficient Static Vulnerability Analysis for JavaScript with Multiversion Dependency Graphs"
+          title=""
+          titleUrl="Efficient Static Vulnerability Analysis for JavaScript with Multiversion Dependency Graphs"
+          url="https://dl.acm.org/doi/10.1145/3656394"
           subtitle="In Proceedings of PLDI'24 - Programming Language Design and Implementation 2024 (A*)"
           content={
             <span>
@@ -48,7 +50,8 @@ const Publications = () => {
         <VerticalTimelineElementCustom
 
           date="December 2023"
-          title="Study of JavaScript Static Analysis Tools for Vulnerability Detection in Node.js Packages"
+          titleUrl="Study of JavaScript Static Analysis Tools for Vulnerability Detection in Node.js Packages"
+          url="https://ieeexplore.ieee.org/document/10168679"
           subtitle="In IEEE Transactions on Reliability 2023"
           content={
             <span>

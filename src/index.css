@@ -54,12 +54,34 @@
     color: var(--primary)
 }
 
+.clickable-glow {
+  color: var(--secondary);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 0px var(--secondary);
+    opacity: 1;
+  }
+  50% {
+    text-shadow: 0 0 15px var(--primary);
+    opacity: 1;
+  }
+}
+
 :root {
 	--background: #0F0F0F;
 	--surface: #1C1C1E;
 	--primary: #E5E5E5;
 	--secondary: #A1A1AA;
 	--accent: #7CBF9E;
+  --human-ready: #0081c6;
+  --inesc-id: #00597d;
+  --ist: #009fe3;
 }
 
 [data-theme="light"] {

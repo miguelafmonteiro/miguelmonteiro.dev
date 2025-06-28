@@ -1,6 +1,7 @@
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
+import coalitionLogo from '../../assets/img/coalition_logo.png';
 import humanLogo from '../../assets/img/human_logo_hand.png';
 import inescLogo from '../../assets/img/inesc_id_logo.png';
 import VerticalTimelineElementCustom from '../timeline/VerticalTimelineElementCustom';
@@ -36,7 +37,26 @@ const Career = () => {
           className="text-2xl max-w-full"
         >
           <VerticalTimelineElementCustom
-            date="Feb 2024 - Present"
+            date="Jun 2025 - Present"
+            icon={coalitionLogo}
+            title="Software Engineer @ "
+            titleUrl="Coalition"
+            subtitle="Remote"
+            content={<span>Developing <b>Workbench</b>: a web-based platform to help underwriters make better and quicker decisions.</span>}
+            icons={
+              <>
+                <Icon icon="devicon-python-plain" className="text-2xl" tooltip="Python" />
+                <Icon icon="devicon-postgresql-plain" className="text-2xl" tooltip="PostgreSQL" />
+                <Icon icon="devicon-amazonwebservices-plain" className="text-2xl" tooltip="Amazon Web Services" />
+                <Icon icon="devicon-docker-plain" className="text-2xl" tooltip="Docker" />
+              </>
+            }
+            imageScale={1}
+            url="https://www.coalitioninc.com/"
+            logoColor={"var(--coalition)"}
+          />
+          <VerticalTimelineElementCustom
+            date="Feb 2024 - May 2025"
             icon={humanLogo}
             title="Software Engineer @ "
             titleUrl="Human Ready"

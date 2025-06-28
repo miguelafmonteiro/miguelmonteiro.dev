@@ -48,12 +48,12 @@ const Home = () => {
       >
         {"Software Engineer @ "}
         <a 
-					href="https://humanready.io"
+					href="https://www.coalitioninc.com/"
 					target="_blank"
 					rel="noopener noreferrer"
           className="relative cursor-pointer underline-animate"
         >
-          Human Ready
+          Coalition
         </a>
       </motion.p>
       <motion.ul 

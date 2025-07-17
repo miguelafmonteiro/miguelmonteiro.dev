@@ -84,6 +84,7 @@ const Education = () => {
             <VerticalTimelineElementCustom
               title="Awards"
               content={
+                <>
                 <span>
                   <a
                     href="https://tecnico.ulisboa.pt/pt/noticias/campus-e-comunidade/premio-de-merito-jeronimo-martins-atribuido-a-estudantes-do-tecnico/"
@@ -94,8 +95,22 @@ const Education = () => {
                     <b>Jerónimo Martins Best Master's Thesis Award</b>
                   </a>
                   <p></p>
-                  I won the 1st prize for the best Master's thesis in Computer Science and Engineering issued by Jerónimo Martins, receiving 1800€ for my work "ExplodeQ.js: A Library of Queries to Detect Injection Vulnerabilities in Node.js Applications."
+                    My Master's thesis, <b><i>ExplodeQ.js: A Library of Queries to Detect Injection Vulnerabilities in Node.js Applications</i></b>, was honored with the Jerónimo Martins Best Master's Thesis Awards in Computer Science and Engineering. This recognition included an 1800€ prize for my work.
                 </span>
+                <p></p>
+                <span>
+                  <a
+                    href="https://tecnico.ulisboa.pt/pt/noticias/campus-e-comunidade/premio-de-merito-jeronimo-martins-atribuido-a-estudantes-do-tecnico/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative cursor-pointer underline-animate"
+                  >
+                    <b>Naoris Protocol Best Master's Thesis Award</b>
+                  </a>
+                  <p></p>
+                  My Master's thesis, <b><i>ExplodeQ.js: A Library of Queries to Detect Injection Vulnerabilities in Node.js Applications</i></b>, was honored with the Naoris Protocol Award for Best Master's Thesis with a Cybersecurity Theme. This recognition included an 1800€ prize for my work.
+                </span>
+                </>
               }
               imageScale={1}
             />

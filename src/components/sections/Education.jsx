@@ -100,7 +100,7 @@ const Education = () => {
                 <p></p>
                 <span>
                   <a
-                    href="https://tecnico.ulisboa.pt/pt/noticias/campus-e-comunidade/premio-de-merito-jeronimo-martins-atribuido-a-estudantes-do-tecnico/"
+                    href="https://dei.tecnico.ulisboa.pt/noticias/premio/alumnus-do-dei-venceu-o-naoris-protocol-award"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative cursor-pointer underline-animate"
